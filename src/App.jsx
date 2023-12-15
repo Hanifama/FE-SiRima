@@ -7,19 +7,22 @@ import Service from "./components/Service"
 import Contact from "./components/Contact"
 import Footer from "./components/Footer"
 import './index.css'
+import About from "./components/About"
+
 Route
 
 function App() {
   return(
-    <>    
+    <div>    
     <NavbarComponent/>
     <PortalComponent/>
+    <About/>
     <News/>
     <Activity/>
     <Service/>
     <Contact/>
     <Footer/>
-    </>
+    </div>
   )
 }
 

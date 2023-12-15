@@ -1,29 +1,43 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useEffect, useState } from 'react'
 
 const Footer = () => {
+  const [dataProfile, setDataProfile ] = useState([])
+
+  useEffect(() => {
+    axios.get(
+        'https://georima.pptik.id/api/v1/company/public'
+        )
+        .then((ressponse) => {
+          setDataProfile(ressponse?.data?.data);
+        });
+      }, []);
+      console.log('Data Profile is : ', dataProfile);
+
+
   return (
     <footer className="footer">
     <div className="container-service footer__container">
+     
       <div className="footer__col">
         <div className="logo">
           <a href="#">
-            <img src="assets/logo.png" width="100px" height="75px" alt="logo" />
+            <img src={`https://georima.pptik.id/api/${dataProfile?.image}`} width="100px" height="75px" alt="logo" />
           </a>
         </div>
+        
         <p>
-          GeoRima Merupakan Next Generation Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem,
-          dignissimos odio. Eveniet neque, architecto dolorem fuga itaque, in,
-          repellat ipsam quis ullam est nesciunt!
+        {dataProfile?.description}
         </p>
         <ul className="footer__socials">
           <li>
-              <i className="ri-facebook-fill" />   (022)5202698         
+              <i className="ri-facebook-fill" />      {dataProfile?.phone}       
           </li>
           <li>            
-              <i className="ri-instagram-line" />  psdmbp2@esdm.go.id           
+              <i className="ri-instagram-line" />  {dataProfile?.email}
           </li>
           <li>            
-              <i className="ri-youtube-line" /> Gedung A.F Lasut X Jl.Soekarno Hatta No.444, Pasirluyu, Kec. Regol, Kota.Bandung, Jawa Barat 40254
+              <i className="ri-youtube-line" /> {dataProfile?.address}
           </li>
         </ul>
       </div>
@@ -51,20 +65,21 @@ const Footer = () => {
           </li>
         </ul>
       </div>
+
       <div className="footer__col">
         <h4>Jam Kerja</h4>
         <p>Kami Siap Melayani Anda</p>
         <div className="schedule">
-        <p>Senin - Kamis: 09:00 - 18:00</p>
-        <p>Jumat: 09:00 - 18:00</p>
-        <p>Sabtu - Minggu: Tutup</p>
-        <p>Tanggal Merah dan Lainnya: Tutup</p>
-    </div>
+        {dataProfile?.information}
+        </div>      
       </div>
      
     </div>
+
+
+    
     <div className="footer__bar">
-      Copyright © 2023 PT. LSKK. All rights reserved.
+      Copyright © 2023 PT.LSKK. All rights reserved.
     </div>
   </footer>
   

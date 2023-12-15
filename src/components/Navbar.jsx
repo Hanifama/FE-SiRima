@@ -24,7 +24,7 @@ const NavbarComponent = () => {
       <a href="#">RB</a>
     </li>
     <li className="link">
-      <a href="#" className="nav__btn" onclick="loginClicked()">
+      <a href="#" className="nav__btn">
         Login
       </a>
     </li>

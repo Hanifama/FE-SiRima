@@ -14,124 +14,160 @@
   box-sizing: border-box;
 }
 
+/* Navbar */
+
+
+nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link a {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+
+.link .nav__btn {
+  padding: 0.5rem 2rem;
+  color: var(--white) !important;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+.link .nav__btn:hover {
+  background-color: var(--secondary-color);
+}
+
+
+nav {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo a {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.nav__links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.link a {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+
+.link .nav__btn {
+  padding: 0.5rem 2rem;
+  color: var(--white) !important;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+.link .nav__btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* end */
+
+
+
+/* Portal Georima */
 .container_portal {
-  width: 100%;
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 1rem;
-  min-height: calc(100vh - 100px);
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 5rem;
-}
-
-.container {
-  width: 100%;
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 1rem;
-  min-height: calc(100vh - 100px);  
-}
-
-nav {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 1rem;
-  height: 100px;
+  width: 90%;
+  max-width: 1920px;
+  height: 50vh;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  padding: 20px;
+  margin-bottom: 31vh;
 }
 
-.nav__logo a {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: 0.3s;
+.content__typography {
+  flex: 1;
+  margin-right: 10px; 
+  margin-top: 80px;
 }
 
-.nav__links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.link a {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-color);
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.link a:hover {
-  color: var(--primary-color);
-}
-
-.link .nav__btn {
-  padding: 0.5rem 2rem;
-  color: var(--white) !important;
-  background-color: var(--primary-color);
-  border-radius: 5px;
-}
-
-.link .nav__btn:hover {
-  background-color: var(--secondary-color);
+.Peta-content {
+  position: absolute;
+  margin-left: 5px;
+  top: 80px;
+  flex: 1;
 }
 
 
-nav {
-  max-width: var(--max-width);
-  margin: auto;
-  padding: 1rem;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.content__typography img {  
+  width: 400px;
+  height: 300px;
+  margin-left: 90px;
 }
 
-.nav__logo a {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: var(--primary-color);
-  text-decoration: none;
-  transition: 0.3s;
+@media screen and (max-width: 768px) {
+  .container_portal {
+    margin-bottom: 0; /* Menghapus margin bottom pada layar kecil */
+  }
+
+  .content__typography,
+  .Peta-content {
+    margin-right: 0; /* Menghapus margin right pada layar kecil */
+    margin-left: 0; /* Menghapus margin left pada layar kecil */
+  }
+
+  .content__typography,
+  .Peta-content {
+    order: initial; /* Mengembalikan urutan elemen menjadi urutan awal */
+  }
 }
 
-.nav__links {
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.link a {
-  padding: 0.5rem 1rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: var(--text-color);
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.link a:hover {
-  color: var(--primary-color);
-}
-
-.link .nav__btn {
-  padding: 0.5rem 2rem;
-  color: var(--white) !important;
-  background-color: var(--primary-color);
-  border-radius: 5px;
-}
-
-.link .nav__btn:hover {
-  background-color: var(--secondary-color);
-}
-
+/* end */
 
 
 .content__container {
@@ -297,17 +333,35 @@ nav {
   max-width: 500px;
   margin: 0 auto;   
 }
-
-.right{
-  max-width: 600px;
+.card {
+  display: flex;
+  flex-wrap: wrap; /* Memungkinkan elemen-elemen untuk meluncur ke baris berikutnya jika tidak cukup lebar */
+  justify-content: flex-start; /* Posisikan elemen-elemen di bagian kiri */
 }
 
-.card-container{  
+.content-images {
+  text-align: center; /* Pusatkan konten di dalam div */
+  margin-right: 20px; /* Beri jarak antara elemen card */
+  margin-bottom: 20px; /* Beri jarak antara elemen-elemen di dalam satu baris */  
+}
+
+.content-images img {
+  border-radius: 50%; /* Membuat gambar menjadi bulat */
+  width: 50px; /* Sesuaikan lebar gambar sesuai kebutuhan */
+  height: 50px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
+  object-fit: cover; /* Hindari gambar terdistorsi */
+  margin-bottom: 8px; /* Beri jarak antara gambar dan teks nama */
+}
+
+
+
+.card-container {  
   margin-top: 1rem;
   max-width: 500px;
   border: 1px solid black;
   border-radius: 10px;
   padding: 2rem;
+  overflow: auto; /* Mengatasi jika elemen-elemen melebihi lebar maksimum */
 }
 
 .content {
@@ -324,27 +378,39 @@ nav {
 .text-content{
   max-width: 600px;
 }
+/* Style for the dropdown title */
+.dropdown-title {
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px; /* Adjust the font size as needed */
+  margin-bottom: 10px; /* Adjust the margin as needed */
+}
 
+/* Style for the dropdown content */
 .dropdown-content {
   display: none;
-  padding-left: 20px;
-  border-left: 1px solid #ccc;
+  transition: margin 0.3s ease; /* Add a smooth transition effect */
 }
 
-.dropdown.active .dropdown-content {
+.dropdown-content p {
+  padding: 10px;
+  margin: 0;
+  border-bottom: 1px solid #ddd; /* Border between items */
+  border: 1px solid #ccc; /* Border around each item */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle lift effect */
+}
+
+/* Remove the border bottom from the last item to avoid double borders */
+.dropdown-content p:last-child {
+  border-bottom: none;
+}
+
+/* Show the content when dropdown is open */
+.dropdown.open .dropdown-content {
   display: block;
+  margin-top: 10px; /* Adjust the margin as needed */
 }
 
-.left {
-  position: relative;
-}
-
-/* Optional: Gaya tampilan yang menunjukkan bahwa elemen dapat diklik */
-.dropdown {
-  cursor: pointer;
-  color: black;
-  text-decoration: none;
-}
 
 /*end beranda*/
 
@@ -675,11 +741,6 @@ input {
 
 .schedule {
   margin-top: 10px;
-}
-
-.schedule p {
-  margin: 5px 0;
-  font-size: 14px;
   color: var(--white)
 }
 

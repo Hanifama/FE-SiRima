@@ -1,23 +1,18 @@
-import React from 'react'
-import PetaPictures from '../assets/peta.png'
+import{ useEffect, useState } from 'react'
+import PetaPictures from '../assets/map-02 1.png'
+import Typography from '../assets/Group 734.png'
+import axios from 'axios'
 
 const PortalHome = () => {
+  
   return (
     <section className="container_portal">
-        <div className="content__container">
-            <h1>
-            <span className="heading">
-                Geo
-                <br />
-            </span>
-            <span className="heading__1">Rima</span>
-            <br />
-            <span className="heading__2">Portal Informasi GeoRima</span>
-            </h1>
+        <div className="content__typography">
+            <img src={Typography} alt="typography Georima" />
         </div>
-        <div className="image__container">
-            <img src={PetaPictures} alt="header" />
-        </div>
+        <div className="Peta-content">
+            <img src={PetaPictures} alt="header peta" />
+        </div>                 
     </section>
 
   )
